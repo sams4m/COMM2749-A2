@@ -27,7 +27,7 @@
     </head>
 
     <body>
-<table class="table">
+<!--<table class="table">
     <tr class="row">
         <td class="column"> 
             <img id="jrpg" src="img/01_0.png" height="300" width="300"/>
@@ -66,16 +66,16 @@
         </td>
         
     </tr>
-</table>
-        <!--<div class="row">
+</table> -->
+        <div class="row">
             <div class="column">
                 <img id="jrpg" src="img/01_0.png" height="300" width="300"/>
             </div>
             <div class="column">
-                <img id="tactical" src="img/03_0.png" height="300" width="300"/>
+                <img id="rouge" src="img/02_0.png" height="300" width="300"/>
             </div>
             <div class="column">
-                <img id="rouge" src="img/02_0.png" height="300" width="300"/>
+                <img id="tactical" src="img/03_0.png" height="300" width="300"/>
             </div>
         </div> 
 
@@ -84,10 +84,10 @@
                 <img id="mud" src="img/04_0.png" height="300" width="300"/>
             </div>
             <div class="column">
-                <img id="dikumud" src="img/06_0.png" height="300" width="300"/>
+                <img id="lpmud" src="img/05_0.png" height="300" width="300"/>
             </div>
             <div class="column">
-                <img id="lpmud" src="img/05_0.png" height="300" width="300"/>
+                <img id="dikumud" src="img/06_0.png" height="300" width="300"/>
             </div>
         </div>
 
@@ -96,12 +96,12 @@
                 <img id="first_per" src="img/07_0.png" height="300" width="300"/>
             </div>
             <div class="column">
-                <img id="sandbox" src="img/09_0.png" height="300" width="300"/>
-            </div>
-            <div class="column">
                 <img id="action" src="img/08_0.png" height="300" width="300"/>
             </div>
-        </div> -->
+            <div class="column">
+                <img id="sandbox" src="img/09_0.png" height="300" width="300"/>
+            </div>
+        </div> 
 
     </body>
     
@@ -113,12 +113,12 @@
     jrpg_sound.src = 'aud/chimes.mp3'
 
     const JRPG = document.getElementById ('jrpg')
-    JRPG.onpointerover = () => {
+    JRPG.onpointerdown = () => {
         JRPG.src = 'img/01_1.png'
         jrpg_sound.play ()
     }
 
-    JRPG.onpointerleave = () => {
+    JRPG.onpointerup = () => {
         JRPG.src = 'img/01_0.png'
     }
 
@@ -127,12 +127,12 @@
     rouge_sound.src = 'aud/keyboard.mp3'
 
     const rouge = document.getElementById ('rouge')
-    rouge.onpointerover = () => {
+    rouge.onpointerdown = () => {
         rouge.src = 'img/02_1.png'
         rouge_sound.play ()
     }
 
-    rouge.onpointerleave = () => {
+    rouge.onpointerup = () => {
         rouge.src = 'img/02_0.png'
     }
 
@@ -141,54 +141,54 @@
     tact_sound.src = 'aud/chess.mp3'
 
     const tact = document.getElementById ('tactical')
-    tact.onpointerover = () => {
+    tact.onpointerdown = () => {
         tact.src = 'img/03_1.png'
         tact_sound.play ()
     }
 
-    tact.onpointerleave = () => {
+    tact.onpointerup = () => {
         tact.src = 'img/03_0.png'
     }
 
     //04 MUD
     const mud_sound = document.createElement ('audio')
-    mud_sound.src = 'aud/beep-door.mp3'
+    mud_sound.src = 'aud/beep00.mp3'
 
     const mud = document.getElementById ('mud')
-    mud.onpointerover = () => {
+    mud.onpointerdown = () => {
         mud.src = 'img/04_1.png'
         mud_sound.play ()
     }
 
-    mud.onpointerleave = () => {
+    mud.onpointerup = () => {
         mud.src = 'img/04_0.png'
     }
 
     //05 LPMUD
     const lpmud_sound = document.createElement ('audio')
-    lpmud_sound.src = 'aud/beep-door.mp3'
+    lpmud_sound.src = 'aud/beep01.mp3'
 
     const lpmud = document.getElementById ('lpmud')
-    lpmud.onpointerover = () => {
+    lpmud.onpointerdown = () => {
         lpmud.src = 'img/05_1.png'
         lpmud_sound.play ()
     }
 
-    lpmud.onpointerleave = () => {
+    lpmud.onpointerup = () => {
         lpmud.src = 'img/05_0.png'
     }
 
     //06 DIKUMUD
     const dikumud_sound = document.createElement ('audio')
-    dikumud_sound.src = 'aud/beep-door.mp3'
+    dikumud_sound.src = 'aud/beep02.mp3'
 
     const dikumud = document.getElementById ('dikumud')
-    dikumud.onpointerover = () => {
+    dikumud.onpointerdown = () => {
         dikumud.src = 'img/06_1.png'
         dikumud_sound.play ()
     }
 
-    dikumud.onpointerleave = () => {
+    dikumud.onpointerup = () => {
         dikumud.src = 'img/06_0.png'
     }
 
@@ -197,12 +197,12 @@
     fp_sound.src = 'aud/beep.mp3'
 
     const fp = document.getElementById ('first_per')
-    fp.onpointerover = () => {
+    fp.onpointerdown = () => {
         fp.src = 'img/07_1.png'
         fp_sound.play ()
     }
 
-    fp.onpointerleave = () => {
+    fp.onpointerup = () => {
         fp.src = 'img/07_0.png'
     }
 
@@ -211,12 +211,12 @@
     boom_sound.src = 'aud/boom.mp3'
 
     const action = document.getElementById ('action')
-    action.onpointerover = () => {
+    action.onpointerdown = () => {
         action.src = 'img/08_1.png'
         boom_sound.play ()
     }
 
-    action.onpointerleave = () => {
+    action.onpointerup = () => {
         action.src = 'img/08_0.png'
     }
 
@@ -225,12 +225,12 @@
     sandbox_sound.src = 'aud/sand.mp3'
 
     const sandbox = document.getElementById ('sandbox')
-    sandbox.onpointerover = () => {
+    sandbox.onpointerdown = () => {
         sandbox.src = 'img/09_1.png'
         sandbox_sound.play ()
     }
 
-    sandbox.onpointerleave = () => {
+    sandbox.onpointerup = () => {
         sandbox.src = 'img/09_0.png'
     }
 
